@@ -39,7 +39,7 @@ async def on_message(message):
 		
 
 	if message.content.startswith('kys'):
-		await client.send_message(message.channel, "no u {0.author.mention} <:kys:456799561562718208>".format(message))
+		await client.send_message(message.channel, "no u {0.author.mention} <:kys:468813075492110347>".format(message))
 	    
 	if message.content.upper().startswith('-RPS'):
 		a=message.content[5:]
@@ -144,10 +144,6 @@ async def on_message(message):
 		else:
 			await client.send_message(message.channel, "Invalid, choose heads/tails.")
 		
-		
-		
-	if message.content.upper().startswith('HI'):
-		await client.send_message(message.channel, "Hello {0.author.mention}!".format(message))
 		
 		
 	if message.content.upper().startswith('-WIKI'):
