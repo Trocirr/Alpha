@@ -29,7 +29,7 @@ def wiki_summary(arg):
 async def on_message(message):
 	if message.content.upper().startswith('-SAY'):
 			args = message.content.split(" ")
-			await client.send_message(message.channel, "(by: {0.author.mention})".format(message))"%s" % (" ".join(args[1:])))
+			await client.send_message(message.channel, "%s" % (" ".join(args[1:])))
 
 		
 
