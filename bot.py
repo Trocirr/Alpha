@@ -245,7 +245,7 @@ async def on_message(message):
 			embed.add_field(name="__Suggestion__", value= "```%s```" % (" ".join(args[1:])), inline=False)
 			embed.add_field(name="By", value="{0.author.mention}".format(message), inline=False)
 			embed.set_thumbnail(url='https://openclipart.org/image/2400px/svg_to_png/10515/yves-guillou-idea.png')
-			await client.send_message(channel, embed=embed)
+			await client.send_message(message.channel, embed=embed)
 			await client.add_reaction(a, "ðŸ‘")
 			await client.add_reaction(a, "ðŸ‘Ž")
 			
