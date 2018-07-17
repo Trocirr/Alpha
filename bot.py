@@ -237,7 +237,7 @@ async def on_message(message):
 		if message.content[9:] =="":
 			await client.send_message(message.channel, 'Error. Type in a suggestion.')
 		else:
-			await client.send_message(message.channel, '<a:Success:468812983074553877> | {0.author.mention} Defender was easy. GG!'.format(message))
+			await client.send_message(message.channel, '<a:Success:468812983074553877> | {0.author.mention} Your suggestion has been sent succesfully!'.format(message))
 			args = message.content.split(" ")		
 			channel=client.get_channel('468812384882917377')
 			
@@ -246,8 +246,8 @@ async def on_message(message):
 			embed.add_field(name="Hosted by:", value="Mario Bonkioo".format(message), inline=False)
 			embed.set_thumbnail(url='https://openclipart.org/image/2400px/svg_to_png/10515/yves-guillou-idea.png')
 			a=await client.send_message(channel, embed=embed)
-			await client.add_reaction(message, "👍")
-			await client.add_reaction(message, "👎")
+			await client.add_reaction(a, "👍")
+			await client.add_reaction(a, "👎")
 			
 			
 	if message.content.upper().startswith('-KILL'):
