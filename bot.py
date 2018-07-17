@@ -246,6 +246,8 @@ async def on_message(message):
 			embed.add_field(name="Hosted by:", value="Mario Bonkioo".format(message), inline=False)
 			embed.set_thumbnail(url='https://openclipart.org/image/2400px/svg_to_png/10515/yves-guillou-idea.png')
 			a=await client.send_message(channel, embed=embed)
+			await client.add_reaction(message, 👍)
+			await client.add_reaction(message, 👎)
 			
 			
 	if message.content.upper().startswith('-KILL'):
