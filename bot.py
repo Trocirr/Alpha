@@ -244,7 +244,6 @@ async def on_message(message):
 			embed = discord.Embed(title='', color=0xFFFF00)
 			embed.add_field(name="__Suggestionr__", value= "```%s```" % (" ".join(args[1:])), inline=False)
 			embed.add_field(name="By:", value="{0.author.mention}".format(message), inline=False)
-			embed.add_field(name="Name", value=ctx.message.server.name)
 			embed.set_thumbnail(url='https://openclipart.org/image/2400px/svg_to_png/10515/yves-guillou-idea.png')
 			a=await client.send_message(channel, embed=embed)
 			await client.add_reaction(a, "👍")
