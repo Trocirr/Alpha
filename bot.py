@@ -264,4 +264,4 @@ async def on_message(message):
 			await client.send_message(message.channel, m)			
 					
 		
-client.run("NDY4NDExOTk1NTc4ODI2NzUz.Di4yMQ.jaaLFAOYc8BQkV_mbXLjhtAfw3k")
+client.run(str(os.environ.get('BOT_TOKEN')))
