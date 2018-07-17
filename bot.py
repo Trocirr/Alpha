@@ -237,7 +237,7 @@ async def on_message(message):
 		if message.content[9:] =="":
 			await client.send_message(message.channel, 'Error. Type in a suggestion.')
 		else:
-			await client.send_message(message.channel, '<a:Success:456782999607050240> | {0.author.mention} Your suggestion has been sent succesfully. \n Go upvoting your suggestion in <#443064835664773120>!'.format(message))
+			await client.send_message(message.channel, '<a:Success:468812983074553877> | {0.author.mention} Your suggestion has been sent succesfully. \n Go upvoting your suggestion in <#443064835664773120>!'.format(message))
 			args = message.content.split(" ")		
 			channel=client.get_channel('443064835664773120')
 			
