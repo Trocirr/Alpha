@@ -237,17 +237,15 @@ async def on_message(message):
 		if message.content[9:] =="":
 			await client.send_message(message.channel, 'Error. Type in a suggestion.')
 		else:
-			await client.send_message(message.channel, '<a:Success:468812983074553877> | {0.author.mention} Your suggestion has been sent succesfully. \n Go upvoting your suggestion in <#443064835664773120>!'.format(message))
+			await client.send_message(message.channel, '<a:Success:468812983074553877> | {0.author.mention} Defender was easy. GG!'.format(message))
 			args = message.content.split(" ")		
-			channel=client.get_channel('443064835664773120')
+			channel=client.get_channel('468812384882917377')
 			
 			embed = discord.Embed(title='', color=0xFFFF00)
-			embed.add_field(name="__Suggestion__", value= "```%s```" % (" ".join(args[1:])), inline=False)
-			embed.add_field(name="By", value="{0.author.mention}".format(message), inline=False)
+			embed.add_field(name="__Clan War__", value= "```%s```" % (" ".join(args[1:])), inline=False)
+			embed.add_field(name="Hosted by:", value="Mario Bonkioo".format(message), inline=False)
 			embed.set_thumbnail(url='https://openclipart.org/image/2400px/svg_to_png/10515/yves-guillou-idea.png')
-			await client.send_message(message.channel, embed=embed)
-			await client.add_reaction(a, "ðŸ‘")
-			await client.add_reaction(a, "ðŸ‘Ž")
+			a=await client.send_message(channel, embed=embed)
 			
 			
 	if message.content.upper().startswith('-KILL'):
