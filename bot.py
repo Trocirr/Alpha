@@ -4,8 +4,6 @@ from discord.ext import commands
 import asyncio
 import time
 import random
-import wikipedia
-
 
 Client = discord.Client()
 client = commands.Bot(command_prefix = "-")
