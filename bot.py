@@ -28,12 +28,9 @@ def wiki_summary(arg):
 @client.event
 async def on_message(message):
 	if message.content.upper().startswith('-SAY'):
-		if message.author.id == "399567243744116738" or message.author.id == "293447483818901504" or message.author.id == "331876823443177473" or message.author.id == "282866250365796352":
 			args = message.content.split(" ")
 			await client.send_message(message.channel, "%s" % (" ".join(args[1:])))
-			await client.delete_message(message)
-		else:
-			await client.send_message(message.channel, "You do not have the permissions to use that command!")
+
 		
 		
 		
@@ -76,7 +73,7 @@ async def on_message(message):
 
 	if message.content.upper().startswith('-8BALL'):
 		if message.content[7:] =="":
-			await client.send_message(message.channel, ":8ball: | Missing required argument - question")
+			await client.send_message(message.channel, ":8ball: | Missing required argument - question.")
 		else:
 			ans = True
 			while ans:
@@ -119,7 +116,7 @@ async def on_message(message):
 		a=message.content[5:]
 		answers = random.randint(1,2)
 		if message.content[5:] =="":
-			await client.send_message(message.channel, "<:alphaError:468832634542227477> Invalid, Choose heads/tails")		
+			await client.send_message(message.channel, "<:alphaError:468832634542227477> Invalid, choose heads/tails.")		
 		elif answers == 1 and 'heads' in a: #heads
 			embed = discord.Embed(title=":moneybag: Coin Flip :moneybag:", description="", color=0x00ff00)
 			embed.add_field(name="Result", value="It was Heads. \n\nNice guess!", inline=False)
