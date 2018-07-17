@@ -5,6 +5,8 @@ import asyncio
 import time
 import random
 import os
+import requests
+
 
 Client = discord.Client()
 client = commands.Bot(command_prefix = "-")
