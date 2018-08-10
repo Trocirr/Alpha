@@ -234,7 +234,7 @@ async def on_message(message):
 		else:
 			await client.send_message(message.channel, '<a:Success:468812983074553876> | {0.author.mention} Your suggestion has been sent succesfully!'.format(message))
 			args = message.content.split(" ")		
-			channel=client.get_channel('468812384882917377')
+			channel=client.get_channel('469177966526726164')
 			
 			embed = discord.Embed(title='', color=0xFFFF00)
 			embed.add_field(name="__Suggestion__", value= "```%s```" % (" ".join(args[1:])), inline=False)
