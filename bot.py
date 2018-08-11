@@ -6,7 +6,7 @@ import time
 import random
 import os
 import requests
-import wikipedia
+
 
 
 Client = discord.Client()
@@ -17,12 +17,7 @@ async def on_ready():
     print('Logged in as')
     print(client.user.name)
     print(client.user.id)
-    print('------')
-
-def wiki_summary(arg):
-	definition = wikipedia.summary(arg, sentences=1, chars=100, 
-	auto_suggest=True, redirect=True)
-	return definition	
+    print('------')	
 		
 
 		
@@ -140,18 +135,6 @@ async def on_message(message):
 		else:
 			await client.send_message(message.channel, "<:alphaError:468832634542227477> Invalid, choose heads/tails.")
 		
-		
-		
-	if message.content.upper().startswith('-WIKI'):
-		try:
-			words = message.content.split()
-			important_words = words[1:]
-			embed = discord.Embed(title="", description="", color=0x00ff00)
-			embed.add_field(name="According to Wikipedia:", value=wiki_summary(important_words))
-			embed.set_thumbnail(url='https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Wikipedia_svg_logo.svg/2000px-Wikipedia_svg_logo.svg.png')
-			await client.send_message(message.channel, embed=embed)
-		except:
-			await client.send_message(message.channel, "<:alphaError:468832634542227477> Error. There were no results matching the query.")
 
 			
 
@@ -168,8 +151,6 @@ async def on_message(message):
 		embed.add_field(name="-rps", value="To play rock/paper/scissors with the bot. (Example = -rps rock) ", inline=False)
 		embed.add_field(name="-flip", value="To filp a coin.  (Example = -flip heads) ", inline=False)
 		embed.add_field(name="-meme", value="Displays a random meme.", inline=False)
-		embed.add_field(name="-cat", value="Displays a random cat.", inline=False)
-		embed.add_field(name="-dog", value="Displays a random dog.", inline=False)
 		embed.add_field(name="-kill", value="Kills the mentioned user.", inline=False)
 		embed.add_field(name="-8ball", value="Answers your yes/no questions. (Example = -8ball <question>)", inline=False)
 		embed.add_field(name="-avatar", value=" Displays the avatar of the mentioned user. (Example = -avatar <user>)", inline=False)
@@ -220,8 +201,6 @@ async def on_message(message):
 		embed = discord.Embed(title=':scroll: __Fun__',description='', color=0xFF8C00)
 		embed.add_field(name="-choose", value="Chooses one option from the list. (Example = -choose 1/2/3, do not put space between options.)", inline=False)
 		embed.add_field(name="-urban", value="Searches the word from Urban Dictionary. (Example = -urban <word>)", inline=False)
-		embed.add_field(name="-cat", value="Displays a random cat.", inline=False)
-		embed.add_field(name="-dog", value="Displays a random dog.", inline=False)
 		embed.add_field(name="-wiki", value="Displays results from Wikipedia. (Example = -wiki <word>)", inline=False)
 		embed.add_field(name="-meme", value="Displays a random meme.", inline=False)
 		embed.add_field(name="-kill", value="Kills the mentioned user.", inline=False)
