@@ -245,7 +245,7 @@ async def on_message(message):
 		embed.add_field(name="", value="Check the ping of the bot", inline=False)
 		embed.add_field(name="",value="Usage: `-ping`", inline=False)
 		embed.set_thumbnail(url='http://pngimg.com/uploads/question_mark/question_mark_PNG130.png')
-		await client.send_message(channel, embed=embed)
+		await client.send_message(message.channel, embed=embed)
 			
 					
 		
