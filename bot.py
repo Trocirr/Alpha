@@ -144,7 +144,7 @@ async def on_message(message):
 		embed.add_field(name="-add", value="Adds the two entered numbers.", inline=False)
 		embed.add_field(name="-sub", value="Subtracts the two entered numbers.", inline=False)
 		embed.add_field(name="-multi", value="Multiplies the two entered numbers.", inline=False)
-		embed.add_field(name="-div", value="Divides the two entered numbers.) ", inline=False)
+		embed.add_field(name="-div", value="Divides the two entered numbers.", inline=False)
 		embed.add_field(name="-choose", value="Chooses one option from the list.", inline=False)
 		embed.add_field(name="-rps", value="To play rock/paper/scissors with the bot.", inline=False)
 		embed.add_field(name="-flip", value="To filp a coin.", inline=False)
