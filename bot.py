@@ -158,6 +158,15 @@ async def on_message(message):
 		embed.add_field(name="-about", value="Displays the bot's info.", inline=False)
 		embed.set_thumbnail(url='http://pngimg.com/uploads/question_mark/question_mark_PNG130.png')
 		await client.send_message(message.channel, embed=embed)
+
+	if message.content.startswith('-help ping'):
+		embed = discord.Embed(title='__Ping Command__', description="", color=0xFF8C00)
+		embed.add_field(name="", value="Checks the ping of the bot.", inline=False)
+		embed.add_field(name="", value="Usage: `-ping`", inline=False)
+		embed.set_thumbnail(url='http://pngimg.com/uploads/question_mark/question_mark_PNG130.png')
+		await client.send_message(message.channel, embed=embed)
+
+
 	
 	if message.content.startswith('-help') and message.content[5:] =="": 
 		embed = discord.Embed(title=":scroll:__Alpha® Help__",description='', color=0xFF8C00)
