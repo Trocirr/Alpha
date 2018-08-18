@@ -238,6 +238,14 @@ async def on_message(message):
 	if message.content.startswith('https://discord.gg/XsQPjBV'):
 		await client.send_message(message.channel, "Join my server mate xdd <a:Success:468812983074553876>")
 
+
+	
+	if message.content.startswith('-help ping'):
+		embed = discord.Embed(title="__Ping Command__",description='', color=0xFF8C00)
+		embed.add_field(name="", value="Check the ping of the bot", inline=False)
+		embed.add_field(name="",value="Usage: `-ping`", inline=False)
+		embed.set_thumbnail(url='http://pngimg.com/uploads/question_mark/question_mark_PNG130.png')
+		await client.send_message(channel, embed=embed)
 			
 					
 		
