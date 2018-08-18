@@ -159,7 +159,8 @@ async def on_message(message):
 		embed.set_thumbnail(url='http://pngimg.com/uploads/question_mark/question_mark_PNG130.png')
 		await client.send_message(message.channel, embed=embed)
 		
-
+@client.event
+async def on_message(message):
 	if message.content.startswith('-helpp') and message.content[5:] =="": 
 		embed = discord.Embed(title=":scroll:__Alpha® Help__",description='', color=0xFF8C00)
 		embed.add_field(name="-help all", value="Shows the help message for all the categories.", inline=False)
