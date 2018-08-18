@@ -241,6 +241,7 @@ async def on_message(message):
 
 	if message.content.startswith('-help ping'):
 		embed = discord.Embed(title="__Help__",description='**Ping Command** \n Usage: `-ping` \n Check the ping of the bot', color= 0xFF8C00)
+		embed.set_thumbnail(url='http://pngimg.com/uploads/question_mark/question_mark_PNG130.png')
 		await client.send_message(message.channel, embed=embed)
 
 
