@@ -159,6 +159,16 @@ async def on_message(message):
 		embed.set_thumbnail(url='http://pngimg.com/uploads/question_mark/question_mark_PNG130.png')
 		await client.send_message(message.channel, embed=embed)
 
+	if message.content.startswith('-helpp') and message.content[5:] =="": 
+		embed = discord.Embed(title=":scroll:__Alpha® Help__",description='', color=0xFF8C00)
+		embed.add_field(name="-help all", value="Shows the help message for all the categories.", inline=False)
+		embed.add_field(name="-help general", value="Shows the general commands.", inline=False)
+		embed.add_field(name="-help games", value="Shows all commands related to the games.", inline=False)
+		embed.add_field(name="-help math", value="Shows all commands related to math.", inline=False)
+		embed.add_field(name="-help fun", value="Shows the commands for fun.", inline=False)
+		embed.set_thumbnail(url='http://pngimg.com/uploads/question_mark/question_mark_PNG130.png')
+		await client.send_message(message.channel, embed=embed)
+
 	if message.content.startswith('-help') and message.content[5:] =="": 
 		embed = discord.Embed(title=":scroll:__Alpha® Help__",description='', color=0xFF8C00)
 		embed.add_field(name="-help all", value="Shows the help message for all the categories.", inline=False)
