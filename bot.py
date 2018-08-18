@@ -141,6 +141,7 @@ async def on_message(message):
 	if message.content.startswith('-help all'): 
 		embed = discord.Embed(title=':scroll: __All Commands__',description='', color=0xFF8C00)
 		embed.add_field(name="-ping", value="Pings the bot.", inline=False)
+		embed.add_field(name="-time", value="Current time in UK.", inline=False)
 		embed.add_field(name="-add", value="Adds the two entered numbers.", inline=False)
 		embed.add_field(name="-sub", value="Subtracts the two entered numbers.", inline=False)
 		embed.add_field(name="-multi", value="Multiplies the two entered numbers.", inline=False)
@@ -179,6 +180,7 @@ async def on_message(message):
 	if message.content.startswith('-help general'): 
 		embed = discord.Embed(title=':scroll: __General__',description='', color=0xFF8C00)
 		embed.add_field(name="-ping", value="Pings the bot.", inline=False)
+		embed.add_field(name="-time", value="Current time in UK.", inline=False)
 		embed.add_field(name="-avatar", value="Displays the avatar of the mentioned user.", inline=False)
 		embed.add_field(name="-about", value="Displays the bot's info.", inline=False)
 		embed.add_field(name="-info", value="Displays the mentioned users info.", inline=False)
