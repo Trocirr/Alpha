@@ -240,9 +240,9 @@ async def on_message(message):
 
 
 	if message.content.startswith('-help ping'):
-		await client.send_message(message.channel," __Ping__ \n Usage: `-ping`. \n *Check the ping of the bot*") 
+		embed = discord.Embed(title="__Ping__",description='Usage: `-ping`', color= 0xFF8C00)
+		embed.add_field(name="", value="Check the ping of the bot")
+		await client.send_message(message.channel, embed=embed)
 
 
-					
-		
 client.run(str(os.environ.get('BOT_TOKEN')))
