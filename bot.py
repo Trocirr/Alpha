@@ -240,9 +240,83 @@ async def on_message(message):
 
 
 	if message.content.startswith('-help ping'):
-		embed = discord.Embed(title="__Help__",description='**Ping Command** \n Usage: `-ping` \n Check the ping of the bot', color= 0xFF8C00)
+		embed = discord.Embed(title="__Help__",description='**Ping Command** \n Usage: `-ping` \n Pings the bot.', color= 0xFF8C00)
 		embed.set_thumbnail(url='http://pngimg.com/uploads/question_mark/question_mark_PNG130.png')
 		await client.send_message(message.channel, embed=embed)
 
+	if message.content.startswith('-help time'):
+		embed = discord.Embed(title="__Help__",description='**Time Command** \n Usage: `-time` \n Current time in UK.', color= 0xFF8C00)
+		embed.set_thumbnail(url='http://pngimg.com/uploads/question_mark/question_mark_PNG130.png')
+		await client.send_message(message.channel, embed=embed)
+
+	if message.content.startswith('-help add'):
+		embed = discord.Embed(title="__Help__",description='**Add Command** \n Usage: `-add` \n Adds the two entered numbers.', color= 0xFF8C00)
+		embed.set_thumbnail(url='http://pngimg.com/uploads/question_mark/question_mark_PNG130.png')
+		await client.send_message(message.channel, embed=embed)
+
+	if message.content.startswith('-help sub'):
+		embed = discord.Embed(title="__Help__",description='**Sub Command** \n Usage: `-sub` \n Subtracts the two entered numbers. Example (-sub 10 2)', color= 0xFF8C00)
+		embed.set_thumbnail(url='http://pngimg.com/uploads/question_mark/question_mark_PNG130.png')
+		await client.send_message(message.channel, embed=embed)
+
+	if message.content.startswith('-help multi'):
+		embed = discord.Embed(title="__Help__",description='**Multi Command** \n Usage: `-multi` \n Multiplies the two entered numbers. Example (-multi 10 2)', color= 0xFF8C00)
+		embed.set_thumbnail(url='http://pngimg.com/uploads/question_mark/question_mark_PNG130.png')
+		await client.send_message(message.channel, embed=embed)
+
+	if message.content.startswith('-help div'):
+		embed = discord.Embed(title="__Help__",description='**Div Command** \n Usage: `-div` \n Divides the two entered numbers. Example (-div 10 2)', color= 0xFF8C00)
+		embed.set_thumbnail(url='http://pngimg.com/uploads/question_mark/question_mark_PNG130.png')
+		await client.send_message(message.channel, embed=embed)
+
+	if message.content.startswith('-help choose'):
+		embed = discord.Embed(title="__Help__",description='**Choose Command** \n Usage: `-choose` \n Chooses one option from the list. Example (-choose 1/2/3)', color= 0xFF8C00)
+		embed.set_thumbnail(url='http://pngimg.com/uploads/question_mark/question_mark_PNG130.png')
+		await client.send_message(message.channel, embed=embed)
+
+	if message.content.startswith('-help rps'):
+		embed = discord.Embed(title="__Help__",description='**Rps Command** \n Usage: `-rps` \n To play rock/paper/scissors with the bot. Example (-rps rock)', color= 0xFF8C00)
+		embed.set_thumbnail(url='http://pngimg.com/uploads/question_mark/question_mark_PNG130.png')
+		await client.send_message(message.channel, embed=embed)
+
+	if message.content.startswith('-help flip'):
+		embed = discord.Embed(title="__Help__",description='**Flip Command** \n Usage: `-flip` \n To flip a coin. Example (-flip heads)', color= 0xFF8C00)
+		embed.set_thumbnail(url='http://pngimg.com/uploads/question_mark/question_mark_PNG130.png')
+		await client.send_message(message.channel, embed=embed)
+
+	if message.content.startswith('-help meme'):
+		embed = discord.Embed(title="__Help__",description='**Meme Command** \n Usage: `-meme` \n Displays a random meme.', color= 0xFF8C00)
+		embed.set_thumbnail(url='http://pngimg.com/uploads/question_mark/question_mark_PNG130.png')
+		await client.send_message(message.channel, embed=embed)
+
+	if message.content.startswith('-help kill'):
+		embed = discord.Embed(title="__Help__",description='**Kill Command** \n Usage: `-kill` \n Kills the mentioned user.', color= 0xFF8C00)
+		embed.set_thumbnail(url='http://pngimg.com/uploads/question_mark/question_mark_PNG130.png')
+		await client.send_message(message.channel, embed=embed)
+
+	if message.content.startswith('-help 8ball'):
+		embed = discord.Embed(title="__Help__",description='**8ball Command** \n Usage: `-8ball` \n Answers your yes/no questions.', color= 0xFF8C00)
+		embed.set_thumbnail(url='http://pngimg.com/uploads/question_mark/question_mark_PNG130.png')
+		await client.send_message(message.channel, embed=embed)
+
+	if message.content.startswith('-help avatar'):
+		embed = discord.Embed(title="__Help__",description='**Avatar Command** \n Usage: `-avatar` \n Displays the avatar of the mentioned user.', color= 0xFF8C00)
+		embed.set_thumbnail(url='http://pngimg.com/uploads/question_mark/question_mark_PNG130.png')
+		await client.send_message(message.channel, embed=embed)
+
+	if message.content.startswith('-help info'):
+		embed = discord.Embed(title="__Help__",description='**Info Command** \n Usage: `-info` \n Displays the mentioned users info.', color= 0xFF8C00)
+		embed.set_thumbnail(url='http://pngimg.com/uploads/question_mark/question_mark_PNG130.png')
+		await client.send_message(message.channel, embed=embed)
+
+	if message.content.startswith('-help server'):
+		embed = discord.Embed(title="__Help__",description='**Server Command** \n Usage: `-server` \n Displays the server stats.', color= 0xFF8C00)
+		embed.set_thumbnail(url='http://pngimg.com/uploads/question_mark/question_mark_PNG130.png')
+		await client.send_message(message.channel, embed=embed)
+
+	if message.content.startswith('-help about'):
+		embed = discord.Embed(title="__Help__",description='**About Command** \n Usage: `-about` \n Displays the bots info.', color= 0xFF8C00)
+		embed.set_thumbnail(url='http://pngimg.com/uploads/question_mark/question_mark_PNG130.png')
+		await client.send_message(message.channel, embed=embed)
 
 client.run(str(os.environ.get('BOT_TOKEN')))
