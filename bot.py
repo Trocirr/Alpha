@@ -235,9 +235,6 @@ async def on_message(message):
 
 
 
-	if message.content.startswith('https://discord.gg/XsQPjBV'):
-		await client.send_message(message.channel, "Join my server mate xdd <a:Success:468812983074553876>")
-
 
 	if message.content.startswith('-help ping'):
 		embed = discord.Embed(title="__Help__",description='**Ping Command** \n Usage: `-ping` \n Pings the bot.', color= 0xFF8C00)
