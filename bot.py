@@ -316,4 +316,4 @@ async def on_message(message):
 		embed.set_thumbnail(url='http://pngimg.com/uploads/question_mark/question_mark_PNG130.png')
 		await client.send_message(message.channel, embed=embed)
 
-client.run("NDg3NjkzOTc4MDAzNzAxNzcx.DnRaYQ.2G-pFnwWC8ZK2yhMVQF1JtxxH60")
+client.run(str(os.environ.get('BOT_TOKEN')))
