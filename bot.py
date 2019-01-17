@@ -23,12 +23,6 @@ async def on_ready():
 		
 @client.event
 async def on_message(message):
-	if message.content.upper().startswith('-SAY'):
-			args = message.content.split(" ")
-			await client.send_message(message.channel, "%s" % (" ".join(args[1:])))
-
-@client.event
-   async def on_message(message):
     if message.content.upper().startswith('-SAYY'):
         embed = discord.Embed(title='ez',description='zz', color=0xFF8C00)
         embed.add_field(name="no", value="", inline=False)
@@ -38,6 +32,7 @@ async def on_message(message):
             await client.delete_message(message)
         else:
             await client.send_message(message.channel, "You do not have the permissions to use that command!")
+
 
 		
 
