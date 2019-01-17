@@ -21,7 +21,7 @@ async def on_ready():
 		
 
 		
-@client.event
+
 @client.event
 async def on_message(message):
     if message.content.upper().startswith('-SAY'):
