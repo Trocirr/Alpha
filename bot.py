@@ -27,6 +27,7 @@ async def on_message(message):
 	 if message.author.id == "399567243744116738" or message.author.id == "293447483818901504":
 			args = message.content.split(" ")
 			await client.send_message(message.channel, "%s" % (" ".join(args[1:])))
+			await client.delete_message(message)
 
 
 		
