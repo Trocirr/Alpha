@@ -54,6 +54,26 @@ async def on_message(message):
 		await client.delete_message(message)
 		await client.send_message(message.channel, "Hey {0.author.mention}! You're not allowed to use that word here!".format(message))
 
+	if message.content.upper().startswith('DUMBASS'):
+		await client.delete_message(message)
+		await client.send_message(message.channel, "Hey {0.author.mention}! You're not allowed to use that word here!".format(message))
+
+	if message.content.upper().startswith('PUSSY'):
+		await client.delete_message(message)
+		await client.send_message(message.channel, "Hey {0.author.mention}! You're not allowed to use that word here!".format(message))
+
+	if message.content.upper().startswith('ASS'):
+		await client.delete_message(message)
+		await client.send_message(message.channel, "Hey {0.author.mention}! You're not allowed to use that word here!".format(message))
+
+	if message.content.upper().startswith('DICK'):
+		await client.delete_message(message)
+		await client.send_message(message.channel, "Hey {0.author.mention}! You're not allowed to use that word here!".format(message))
+
+	if message.content.upper().startswith('DUMB'):
+		await client.delete_message(message)
+		await client.send_message(message.channel, "Hey {0.author.mention}! You're not allowed to use that word here!".format(message))
+
 	if message.content.startswith('kys'):
 		await client.send_message(message.channel, "no u {0.author.mention} <:kys:468813075492110347>".format(message))
 	    
