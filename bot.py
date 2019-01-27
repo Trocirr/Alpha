@@ -24,13 +24,9 @@ async def on_ready():
 		
 @client.event
 async def on_message(message):
-    contents = message.content.split(" ") #contents is a list type
-    for word in contents:
-        if word.upper() in chat_filter:
-            if not message.author.id in bypass_list:
-                try:
-                    await client.send_message(message.channel, "**Hey!** You're not allowed to use that word here!")
-		    await client.delete_message(message)
+	if message.content.upper().startswith('NIGGA'):
+	await client.say("Hey! You're not allowed to use that word here!")
+	await client.delete_message(message)
 		
 @client.event
 async def on_message(message):
