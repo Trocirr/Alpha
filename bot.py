@@ -19,11 +19,7 @@ async def on_ready():
     print(client.user.name)
     print(client.user.id)
     print('------')	
-		
-@client.event
-async def on_message(message):
-	if message.content.startswith('nigga'):
-		await client.send_message(message.channel, "no u {0.author.mention} <:kys:468813075492110347>".format(message))
+
 		
 @client.event
 async def on_message(message):
@@ -34,7 +30,8 @@ async def on_message(message):
 			await client.delete_message(message)
 
 
-		
+	if message.content.startswith('nigga'):
+		await client.send_message(message.channel, "no u {0.author.mention} <:kys:468813075492110347>".format(message))		
 
 	if message.content.startswith('kys'):
 		await client.send_message(message.channel, "no u {0.author.mention} <:kys:468813075492110347>".format(message))
