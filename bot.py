@@ -30,7 +30,7 @@ async def on_message(message):
 			await client.delete_message(message)
 
 
-	if message.content.startswith('nigga'):
+	if message.content.upper().startswith('NIGGA'):
 		await client.send_message(message.channel, "no u {0.author.mention} <:kys:468813075492110347>".format(message))		
 
 	if message.content.startswith('kys'):
