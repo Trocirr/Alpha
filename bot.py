@@ -23,7 +23,7 @@ async def on_ready():
 @client.event
 async def on_message(message):
 	if message.content.upper().startswith('NIGGA'):
-		await client.say("Hey! You're not allowed to use that word here"!)
+			await client.send_message(message.channel, "Hey! You're not allowed to use that word here!")
 		
 @client.event
 async def on_message(message):
