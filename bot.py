@@ -31,6 +31,7 @@ async def on_message(message):
 
 
 	if message.content.upper().startswith('NIGGA'):
+		await client.delete_message(message)
 		await client.send_message(message.channel, "Hey {0.author.mention}! You're not allowed to use that word here!".format(message))
 		
 
