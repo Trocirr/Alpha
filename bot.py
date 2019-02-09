@@ -34,6 +34,10 @@ async def on_message(message):
 		await client.delete_message(message)
 		await client.send_message(message.channel, "Hey {0.author.mention}! You're not allowed to use that word here!".format(message))
 
+	if message.content.upper().startswith('NIGGER'):
+		await client.delete_message(message)
+		await client.send_message(message.channel, "Hey {0.author.mention}! You're not allowed to use that word here!".format(message))
+
 	if message.content.upper().startswith('CUNT'):
 		await client.delete_message(message)
 		await client.send_message(message.channel, "Hey {0.author.mention}! You're not allowed to use that word here!".format(message))
@@ -67,6 +71,46 @@ async def on_message(message):
 		await client.send_message(message.channel, "Hey {0.author.mention}! You're not allowed to use that word here!".format(message))
 
 	if message.content.upper().startswith('DICK'):
+		await client.delete_message(message)
+		await client.send_message(message.channel, "Hey {0.author.mention}! You're not allowed to use that word here!".format(message))
+
+	if message.content.upper().startswith('MOTHERFUCKER'):
+		await client.delete_message(message)
+		await client.send_message(message.channel, "Hey {0.author.mention}! You're not allowed to use that word here!".format(message))
+
+	if message.content.upper().startswith('BASTARD'):
+		await client.delete_message(message)
+		await client.send_message(message.channel, "Hey {0.author.mention}! You're not allowed to use that word here!".format(message))
+
+	if message.content.upper().startswith('FUCKER'):
+		await client.delete_message(message)
+		await client.send_message(message.channel, "Hey {0.author.mention}! You're not allowed to use that word here!".format(message))
+
+	if message.content.upper().startswith('PRICK'):
+		await client.delete_message(message)
+		await client.send_message(message.channel, "Hey {0.author.mention}! You're not allowed to use that word here!".format(message))
+
+	if message.content.upper().startswith('SHIT'):
+		await client.delete_message(message)
+		await client.send_message(message.channel, "Hey {0.author.mention}! You're not allowed to use that word here!".format(message))
+
+	if message.content.upper().startswith('KID'):
+		await client.delete_message(message)
+		await client.send_message(message.channel, "Hey {0.author.mention}! You're not allowed to use that word here!".format(message))
+
+	if message.content.upper().startswith('CRAP'):
+		await client.delete_message(message)
+		await client.send_message(message.channel, "Hey {0.author.mention}! You're not allowed to use that word here!".format(message))
+
+	if message.content.upper().startswith('HOLY SHIT'):
+		await client.delete_message(message)
+		await client.send_message(message.channel, "Hey {0.author.mention}! You're not allowed to use that word here!".format(message))
+
+	if message.content.upper().startswith('BITCH'):
+		await client.delete_message(message)
+		await client.send_message(message.channel, "Hey {0.author.mention}! You're not allowed to use that word here!".format(message))
+
+	if message.content.upper().startswith('SON OF A BITCH'):
 		await client.delete_message(message)
 		await client.send_message(message.channel, "Hey {0.author.mention}! You're not allowed to use that word here!".format(message))
 
