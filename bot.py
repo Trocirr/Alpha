@@ -20,6 +20,11 @@ async def on_ready():
     print(client.user.id)
     print('------')	
 
+
+@client.event
+async def on_member_join(member):
+	role = discord.utils.get(member.server.roles, name="Guests")
+	await client.add_roles(member, role)
 		
 @client.event
 async def on_message(message):
@@ -29,7 +34,7 @@ async def on_message(message):
 			await client.send_message(message.channel, "%s" % (" ".join(args[1:])))
 			await client.delete_message(message)
 
-
+	
 	
 	if message.content.startswith('kys'):
 		await client.send_message(message.channel, "no u {0.author.mention} <:kys:468813075492110347>".format(message))
