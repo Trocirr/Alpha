@@ -21,15 +21,11 @@ async def on_ready():
     print('------')	
 
 
-@client.event
-async def on_member_join(member):
-	role = discord.utils.get(member.server.roles, name="Guests")
-	await client.add_roles(member, role)
 
 @client.event
 async def on_member_join(member):
 	channel = member.server.get_channel("535450909107552259")
-	msg = "Welcome {0} to {1}".format(member.mention, member.server.name)
+	msg = "Welcome {0} to the {1}. Before starting read <#546002575959523365>".format(member.mention, member.server.name)
 	await client.send_message(channel, msg)
 		
 @client.event
