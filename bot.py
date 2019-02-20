@@ -29,6 +29,12 @@ async def on_member_join(member):
 	await client.send_message(channel, msg)
 		
 @client.event
+async def on_member_remove(member):
+    channel = member.server.get_channel("535450909107552259")
+    msg = "**{0}** just left! Goodbye".format(member.mention)
+    await client.send_message(channel, msg)
+
+@client.event
 async def on_message(message):
 	if message.content.upper().startswith('-SAY'):
 	 if message.author.id == "399567243744116738" or message.author.id == "293447483818901504":
