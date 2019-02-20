@@ -31,7 +31,7 @@ async def on_member_join(member):
 @client.event
 async def on_member_remove(member):
     channel = member.server.get_channel("535450909107552259")
-    msg = "**{0}** just left! Goodbye".format(member.mention)
+    msg = "**{0}** just left the server! Bye bye...".format(member, ctx.message.author)
     await client.send_message(channel, msg)
 
 @client.event
