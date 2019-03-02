@@ -225,13 +225,13 @@ async def on_message(message):
 		if message.content[9:] =="":
 			await client.send_message(message.channel, '<:alphaError:468832634542227477> Error. Type in a suggestion.')
 		else:
-			await client.send_message(message.channel, '<:alphaSuccess:547510448464068628> <@324958418899042305> Your suggestion has been sent succesfully!')
+			await client.send_message(message.channel, '<:alphaSuccess:547510448464068628> {0.author.mention} Your suggestion has been sent succesfully!'.format(message))
 			args = message.content.split(" ")		
-			channel=client.get_channel('538341912529076224')
+			channel=client.get_channel('536932821520875530')
 			
 			embed = discord.Embed(title='', color=0xFFFF00)
 			embed.add_field(name="__Suggestion__", value= "```%s```" % (" ".join(args[1:])), inline=False)
-			embed.add_field(name="By:", value="<@324958418899042305>", inline=False)
+			embed.add_field(name="By:", value="{0.author.mention}".format(message), inline=False)
 			embed.set_thumbnail(url="https://images-ext-2.discordapp.net/external/DrPt9N7Qmi_7ihz98jQBxyBLnl_gvvt4FoS3MhNBqpo/https/openclipart.org/image/2400px/svg_to_png/10515/yves-guillou-idea.png")
 			a=await client.send_message(channel, embed=embed)
 			await client.add_reaction(a, "👍")
