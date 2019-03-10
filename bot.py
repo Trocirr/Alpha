@@ -324,7 +324,7 @@ async def on_message(message):
 		await client.send_message(message.channel, embed=embed)
 
 	if message.content.startswith('-help credits'):
-		embed = discord.Embed(title="Command: -credits",description='**About Command** \n Usage: `-about` \n Displays the bots info.', color= 0xFF8C00)
+		embed = discord.Embed(title="Command: -credits",description='**About Command** \n Usage: `-about` \n Displays the bots info.', color= 0x546E7A)
 		embed.set_thumbnail(url='http://pngimg.com/uploads/question_mark/question_mark_PNG130.png')
 		await client.send_message(message.channel, embed=embed)
 
