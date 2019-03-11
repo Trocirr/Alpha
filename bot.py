@@ -249,82 +249,67 @@ async def on_message(message):
 
 
 	if message.content.startswith('-help ping'):
-		embed = discord.Embed(title="Command: -ping",description='**Description:** Pings the bot \n **Cooldown:** 3 seconds \n **Usage:** `-ping`', color= 0x546E7A)
+		embed = discord.Embed(title="Command: -ping",description='**Description:** Pings the bot \n **Cooldown:** 3 seconds \n **Usage:** -ping', color= 0x546E7A)
 		await client.send_message(message.channel, embed=embed)
 
 	if message.content.startswith('-help time'):
-		embed = discord.Embed(title="Command: -time",description='**Time Command** \n Usage: `-time` \n Current time in UK.', color= 0x546E7A)
-		embed.set_thumbnail(url='http://pngimg.com/uploads/question_mark/question_mark_PNG130.png')
+		embed = discord.Embed(title="Command: -time",description='**Description:** Current time in UK \n **Cooldown:** 5 seconds \n **Usage:** -time', color= 0x546E7A)
 		await client.send_message(message.channel, embed=embed)
 
 	if message.content.startswith('-help add'):
-		embed = discord.Embed(title="Command: -add",description='**Add Command** \n Usage: `-add` \n Adds the two entered numbers.', color= 0x546E7A)
-		embed.set_thumbnail(url='http://pngimg.com/uploads/question_mark/question_mark_PNG130.png')
+		embed = discord.Embed(title="Command: -add",description='**Description:** Adds the two entered numbers \n **Cooldown:** 3 seconds \n **Usage:** -add \n **Example:** -add 10 5', color= 0x546E7A)
 		await client.send_message(message.channel, embed=embed)
 
 	if message.content.startswith('-help sub'):
-		embed = discord.Embed(title="Command: -sub",description='**Sub Command** \n Usage: `-sub` \n Subtracts the two entered numbers. Example (-sub 10 2)', color= 0x546E7A)
-		embed.set_thumbnail(url='http://pngimg.com/uploads/question_mark/question_mark_PNG130.png')
+		embed = discord.Embed(title="Command: -sub",description='**Description:** Subtracts the two entered numbers \n **Cooldown:** 3 seconds \n **Usage:** -sub \n **Example:** -sub 10 5', color= 0x546E7A)
 		await client.send_message(message.channel, embed=embed)
 
 	if message.content.startswith('-help multi'):
-		embed = discord.Embed(title="Command: -multi",description='**Multi Command** \n Usage: `-multi` \n Multiplies the two entered numbers. Example (-multi 10 2)', color= 0x546E7A)
-		embed.set_thumbnail(url='http://pngimg.com/uploads/question_mark/question_mark_PNG130.png')
+		embed = discord.Embed(title="Command: -multi",description='**Description:** Multiplies the two entered numbers \n **Cooldown:** 3 seconds \n **Usage:** -multi \n **Example:** -multi 10 5', color= 0x546E7A)
 		await client.send_message(message.channel, embed=embed)
 
 	if message.content.startswith('-help div'):
-		embed = discord.Embed(title="Command: -div",description='**Div Command** \n Usage: `-div` \n Divides the two entered numbers. Example (-div 10 2)', color= 0x546E7A)
-		embed.set_thumbnail(url='http://pngimg.com/uploads/question_mark/question_mark_PNG130.png')
+		embed = discord.Embed(title="Command: -div",description='**Description:** Divides the two entered numbers \n **Cooldown:** 3 seconds \n **Usage:** -div \n **Example:** -div 10 5', color= 0x546E7A)
 		await client.send_message(message.channel, embed=embed)
 
 	if message.content.startswith('-help choose'):
-		embed = discord.Embed(title="Command: -choose",description='**Choose Command** \n Usage: `-choose` \n Chooses one option from the list. Example (-choose 1/2/3)', color= 0x546E7A)
-		embed.set_thumbnail(url='http://pngimg.com/uploads/question_mark/question_mark_PNG130.png')
+		embed = discord.Embed(title="Command: -choose",description='**Description:** Chooses one option from the list \n **Cooldown:** 3 seconds \n **Usage:** -choose \n **Example** -choose 1/2/3', color= 0x546E7A)
 		await client.send_message(message.channel, embed=embed)
 
 	if message.content.startswith('-help rps'):
-		embed = discord.Embed(title="Command: -rps",description='**Rps Command** \n Usage: `-rps` \n To play rock/paper/scissors with the bot. Example (-rps rock)', color= 0x546E7A)
-		embed.set_thumbnail(url='http://pngimg.com/uploads/question_mark/question_mark_PNG130.png')
+		embed = discord.Embed(title="Command: -rps",description='**Description:** To play rock/paper/scissors with the bot \n **Cooldown:** No cooldown \n **Usage:** -rps \n **Example:** -rps rock', color= 0x546E7A)
 		await client.send_message(message.channel, embed=embed)
 
 	if message.content.startswith('-help flip'):
-		embed = discord.Embed(title="Command: -flip",description='**Flip Command** \n Usage: `-flip` \n To flip a coin. Example (-flip heads)', color= 0x546E7A)
-		embed.set_thumbnail(url='http://pngimg.com/uploads/question_mark/question_mark_PNG130.png')
+		embed = discord.Embed(title="Command: -flip",description='**Description:** To flip a coin \n **Cooldown:** No cooldown \n **Usage:** -flip \n **Example:** -flip heads', color= 0x546E7A)
 		await client.send_message(message.channel, embed=embed)
 
 	if message.content.startswith('-help meme'):
-		embed = discord.Embed(title="Command: -meme",description='**Meme Command** \n Usage: `-meme` \n Displays a random meme.', color= 0x546E7A)
-		embed.set_thumbnail(url='http://pngimg.com/uploads/question_mark/question_mark_PNG130.png')
+		embed = discord.Embed(title="Command: -meme",description='**Description:** Displays a random meme \n **Cooldown:** 5 seconds \n **Usage:** -meme', color= 0x546E7A)
 		await client.send_message(message.channel, embed=embed)
 
 	if message.content.startswith('-help kill'):
-		embed = discord.Embed(title="Command: -kill",description='**Kill Command** \n Usage: `-kill` \n Kills the mentioned user.', color= 0x546E7A)
-		embed.set_thumbnail(url='http://pngimg.com/uploads/question_mark/question_mark_PNG130.png')
+		embed = discord.Embed(title="Command: -kill",description='**Description:** Kills the mentioned user \n **Cooldown:** No cooldown \n **Usage:** -kill \n **Example:** -kill @Trocir', color= 0x546E7A)
 		await client.send_message(message.channel, embed=embed)
 
 	if message.content.startswith('-help 8ball'):
-		embed = discord.Embed(title="Command: -8ball",description='**8ball Command** \n Usage: `-8ball` \n Answers your yes/no questions.', color= 0x546E7A)
-		embed.set_thumbnail(url='http://pngimg.com/uploads/question_mark/question_mark_PNG130.png')
+		embed = discord.Embed(title="Command: -8ball",description='**Description:** Answers your yes/no questions \n **Cooldown:** No cooldown \n **Usage:** -8ball \n **Example:** -8ball [Question]', color= 0x546E7A)
 		await client.send_message(message.channel, embed=embed)
 
 	if message.content.startswith('-help avatar'):
-		embed = discord.Embed(title="Command: -avatar",description='**Avatar Command** \n Usage: `-avatar` \n Displays the avatar of the mentioned user.', color= 0x546E7A)
-		embed.set_thumbnail(url='http://pngimg.com/uploads/question_mark/question_mark_PNG130.png')
+		embed = discord.Embed(title="Command: -avatar",description='**Description:** Displays the avatar of the mentioned user \n **Cooldown:** 3 seconds \n **Usage:** -avatar \n **Example:** -avatar @Trocir', color= 0x546E7A)
 		await client.send_message(message.channel, embed=embed)
 
 	if message.content.startswith('-help userinfo'):
-		embed = discord.Embed(title="Command: -userinfo",description='**Info Command** \n Usage: `-info` \n Displays the mentioned users info.', color= 0x546E7A)
-		embed.set_thumbnail(url='http://pngimg.com/uploads/question_mark/question_mark_PNG130.png')
+		embed = discord.Embed(title="Command: -userinfo",description='**Description:** Displays the mentioned users info \n **Cooldown:** 3 seconds \n **Usage:** -userinfo \n **Example:** -userinfo @Trocir', color= 0x546E7A)
 		await client.send_message(message.channel, embed=embed)
 
 	if message.content.startswith('-help serverinfo'):
-		embed = discord.Embed(title="Command: -serverinfo",description='**Server Command** \n Usage: `-server` \n Displays the server stats.', color= 0x546E7A)
-		embed.set_thumbnail(url='http://pngimg.com/uploads/question_mark/question_mark_PNG130.png')
+		embed = discord.Embed(title="Command: -serverinfo",description='**Description:** Displays the server stats  \n **Cooldown:** 3 seconds \n **Usage:** -serverinfo', color= 0x546E7A)
 		await client.send_message(message.channel, embed=embed)
 
 	if message.content.startswith('-help credits'):
-		embed = discord.Embed(title="Command: -credits",description='**About Command** \n Usage: `-about` \n Displays the bots info.', color= 0x546E7A)
-		embed.set_thumbnail(url='http://pngimg.com/uploads/question_mark/question_mark_PNG130.png')
+		embed = discord.Embed(title="Command: -credits",description='**Description:** Displays the bots info \n **Cooldown:** 5 seconds \n **Usage:** -credits', color= 0x546E7A)
 		await client.send_message(message.channel, embed=embed)
 
 client.run(str(os.environ.get('BOT_TOKEN')))
