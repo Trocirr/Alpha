@@ -249,8 +249,8 @@ async def on_message(message):
 
 
 	if message.content.startswith('-help ping'):
-		embed = discord.Embed(title="Command: -ping",description='**Description:** \n **Cooldown:** 3 seconds \n **Usage:** -ping', color= 0x546E7A)
-		embed.set_author(name="", icon_url='http://pngimg.com/uploads/question_mark/question_mark_PNG130.png')
+		embed = discord.Embed(title="",description='**Description:** \n **Cooldown:** 3 seconds \n **Usage:** -ping', color= 0x546E7A)
+		embed.set_author(name="Command: -ping", icon_url='http://pngimg.com/uploads/question_mark/question_mark_PNG130.png')
 		await client.send_message(message.channel, embed=embed)
 
 	if message.content.startswith('-help time'):
