@@ -10,7 +10,7 @@ import requests
 
 
 Client = discord.Client()
-client = commands.Bot(command_prefix = "macro")
+client = commands.Bot(command_prefix = "!")
 
 
 @client.event
