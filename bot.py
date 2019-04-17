@@ -10,7 +10,7 @@ import requests
 
 
 Client = discord.Client()
-client = commands.Bot(command_prefix = "-")
+client = commands.Bot(command_prefix = "macro")
 
 
 @client.event
@@ -23,14 +23,14 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
-	if message.content.upper().startswith('-SAY'):
+	if message.content.upper().startswith('MACROSAY'):
 	 if message.author.id == "399567243744116738" or message.author.id == "293447483818901504":
 			args = message.content.split(" ")
 			await client.send_message(message.channel, "%s" % (" ".join(args[1:])))
 			await client.delete_message(message)
 
 	    
-	if message.content.upper().startswith('-RPS'):
+	if message.content.upper().startswith('MACRORPS'):
 		a=message.content[5:]
 		answers = random.randint(1,3)
 		if message.content[5:] =="":
@@ -63,7 +63,7 @@ async def on_message(message):
 			
 			
 
-	if message.content.upper().startswith('-8BALL'):
+	if message.content.upper().startswith('MACRO8BALL'):
 		if message.content[7:] =="":
 			await client.send_message(message.channel, ":8ball: | Missing required argument - question.")
 		else:
@@ -104,7 +104,7 @@ async def on_message(message):
 		
 		
 
-	if message.content.upper().startswith('-FLIP'):
+	if message.content.upper().startswith('MACROFLIP'):
 		a=message.content[5:]
 		answers = random.randint(1,2)
 		if message.content[5:] =="":
@@ -136,7 +136,7 @@ async def on_message(message):
 
 			
 
-	if message.content.startswith('-help all'): 
+	if message.content.startswith('macrohelp all'): 
 		embed = discord.Embed(title=':scroll: __All Commands__',description='', color=0xFF8C00)
 		embed.add_field(name="-ping", value="Pings the bot.", inline=False)
 		embed.add_field(name="-time", value="Current time in UK.", inline=False)
@@ -161,8 +161,8 @@ async def on_message(message):
 		embed.set_thumbnail(url='http://pngimg.com/uploads/question_mark/question_mark_PNG130.png')
 		await client.send_message(message.channel, embed=embed)
 
-	if message.content.startswith('-help') and message.content[5:] =="": 
-		embed = discord.Embed(title=":scroll:__BFL Help__",description='', color=0xFF8C00)
+	if message.content.startswith('macrohelp') and message.content[5:] =="": 
+		embed = discord.Embed(title=":scroll:__Macro Help__",description='', color=0xFF8C00)
 		embed.add_field(name="-help all", value="Shows the help message for all the categories.", inline=False)
 		embed.add_field(name="-help general", value="Shows the general commands.", inline=False)
 		embed.add_field(name="-help moderator", value="Shows the moderator commands.", inline=False)
@@ -172,7 +172,7 @@ async def on_message(message):
 		embed.set_thumbnail(url='http://pngimg.com/uploads/question_mark/question_mark_PNG130.png')
 		await client.send_message(message.channel, embed=embed)
 	
-	if message.content.startswith('-help games'): 
+	if message.content.startswith('macrohelp games'): 
 		embed = discord.Embed(title=':scroll: __Games__',description='', color=0xFF8C00)
 		embed.add_field(name="-rps", value="-rps = To play rock/paper/scissors with the bot.", inline=False)
 		embed.add_field(name="-flip", value="To filp a coin.", inline=False)
@@ -180,7 +180,7 @@ async def on_message(message):
 		embed.set_thumbnail(url='http://pngimg.com/uploads/question_mark/question_mark_PNG130.png')
 		await client.send_message(message.channel, embed=embed)	
 		
-	if message.content.startswith('-help general'): 
+	if message.content.startswith('macrohelp general'): 
 		embed = discord.Embed(title=':scroll: __General__',description='', color=0xFF8C00)
 		embed.add_field(name="-ping", value="Pings the bot.", inline=False)
 		embed.add_field(name="-time", value="Current time in UK.", inline=False)
@@ -191,7 +191,7 @@ async def on_message(message):
 		embed.set_thumbnail(url='http://pngimg.com/uploads/question_mark/question_mark_PNG130.png')
 		await client.send_message(message.channel, embed=embed)	
 		
-	if message.content.startswith('-help moderator'): 
+	if message.content.startswith('macrohelp moderator'): 
 		embed = discord.Embed(title=':scroll: __Moderator__',description='', color=0xFF8C00)
 		embed.add_field(name="-mute", value="Mute a member so they cannot type or speak.", inline=False)
 		embed.add_field(name="-ban", value="Ban a member.", inline=False)
@@ -200,7 +200,7 @@ async def on_message(message):
 		embed.set_thumbnail(url='http://pngimg.com/uploads/question_mark/question_mark_PNG130.png')
 		await client.send_message(message.channel, embed=embed)	
 		
-	if message.content.startswith('-help math'): 
+	if message.content.startswith('macrohelp math'): 
 		embed = discord.Embed(title=':scroll: __Math__',description='', color=0xFF8C00)
 		embed.add_field(name="-add", value="Adds the two entered numbers. ", inline=False)
 		embed.add_field(name="-sub", value="Subtracts the two entered numbers.", inline=False)
@@ -209,7 +209,7 @@ async def on_message(message):
 		embed.set_thumbnail(url='http://pngimg.com/uploads/question_mark/question_mark_PNG130.png')
 		await client.send_message(message.channel, embed=embed)		
 		
-	if message.content.startswith('-help fun'): 
+	if message.content.startswith('macrohelp fun'): 
 		embed = discord.Embed(title=':scroll: __Fun__',description='', color=0xFF8C00)
 		embed.add_field(name="-choose", value="Chooses one option from the list.", inline=False)
 		embed.add_field(name="-meme", value="Displays a random meme.", inline=False)
@@ -235,7 +235,7 @@ async def on_message(message):
 			await client.add_reaction(a, "👎")
 			
 			
-	if message.content.upper().startswith('-KILL'):
+	if message.content.upper().startswith('MACROKILL'):
 		a=message.content[6:]
 		if a == "":
 			await client.send_message(message.channel, "<:alphaError:468832634542227477> Error. Mention someone to kill him.")
