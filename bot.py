@@ -218,18 +218,18 @@ async def on_message(message):
 		await client.send_message(message.channel, embed=embed)	
 		
 		
-	if message.content.startswith('-suggest'):
+	if message.content.startswith('macroannounce'):
 		if message.content[9:] =="":
-			await client.send_message(message.channel, '<:alphaError:468832634542227477> Error. Type in a suggestion.')
+			await client.send_message(message.channel, 'Error. Type in an announcement.')
 		else:
-			await client.send_message(message.channel, '<:alphaSuccess:547510448464068628> {0.author.mention} Your suggestion has been sent succesfully!'.format(message))
+			await client.send_message(message.channel, '{0.author.mention} Your announcement has been sent succesfully!'.format(message))
 			args = message.content.split(" ")		
-			channel=client.get_channel('536932821520875530')
+			channel=client.get_channel('568029667202695169')
 			
-			embed = discord.Embed(title='', color=0xFFFF00)
-			embed.add_field(name="__Suggestion__", value= "```%s```" % (" ".join(args[1:])), inline=False)
+			embed = discord.Embed(title='', color=0x3391D0)
+			embed.add_field(name="__Announcement__", value= "```%s```" % (" ".join(args[1:])), inline=False)
 			embed.add_field(name="By:", value="{0.author.mention}".format(message), inline=False)
-			embed.set_thumbnail(url="https://images-ext-2.discordapp.net/external/DrPt9N7Qmi_7ihz98jQBxyBLnl_gvvt4FoS3MhNBqpo/https/openclipart.org/image/2400px/svg_to_png/10515/yves-guillou-idea.png")
+			embed.set_thumbnail(url="https://media.discordapp.net/attachments/566631626545823786/568131998523064320/ef94710266f57ca3e88c8cbe05fc4a8a.png?width=192&height=192")
 			a=await client.send_message(channel, embed=embed)
 			await client.add_reaction(a, "👍")
 			await client.add_reaction(a, "👎")
