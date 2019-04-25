@@ -34,7 +34,7 @@ async def on_message(message):
 		a=message.content[5:]
 		answers = random.randint(1,3)
 		if message.content[5:] =="":
-			await client.send_message(message.channel, "<:alphaError:468832634542227477> Invalid, Choose rock/paper/scissors.")		
+			await client.send_message(message.channel, "<:bflError:571029125578620928> Invalid, Choose rock/paper/scissors.")		
 		elif answers == 1 and 'rock' in a: #rock
 			await client.send_message(message.channel, ":large_blue_diamond: | I choose **rock** too! It's a draaaw!")
 		elif answers == 1 and 'paper' in a: #rock
@@ -57,7 +57,7 @@ async def on_message(message):
 			await client.send_message(message.channel, ":scissors: | I choose **scissors** too! It's a draaaw!")
 		
 		else:
-			await client.send_message(message.channel, "<:alphaError:468832634542227477> Invalid, choose rock/paper/scissors.")	
+			await client.send_message(message.channel, "<:bflError:571029125578620928> Invalid, choose rock/paper/scissors.")	
 			
 
 			
@@ -108,7 +108,7 @@ async def on_message(message):
 		a=message.content[5:]
 		answers = random.randint(1,2)
 		if message.content[5:] =="":
-			await client.send_message(message.channel, "<:alphaError:468832634542227477> Invalid, choose heads/tails.")		
+			await client.send_message(message.channel, "<:bflError:571029125578620928> Invalid, choose heads/tails.")		
 		elif answers == 1 and 'heads' in a: #heads
 			embed = discord.Embed(title=":moneybag: Coin Flip :moneybag:", description="", color=0x00ff00)
 			embed.add_field(name="Result", value="It was Heads. \n\nNice guess!", inline=False)
@@ -131,7 +131,7 @@ async def on_message(message):
 			await client.send_message(message.channel, embed=embed)	
 
 		else:
-			await client.send_message(message.channel, "<:alphaError:468832634542227477> Invalid, choose heads/tails.")
+			await client.send_message(message.channel, "<:bflError:571029125578620928> Invalid, choose heads/tails.")
 		
 
 			
@@ -219,13 +219,10 @@ async def on_message(message):
 		
 		
 	if message.content.startswith('-announce'):
-		if message.content[9:] =="":
-			await client.send_message(message.channel, 'Error. Type in an announcement.')
-		else:
+		if message.author.id == "399567243744116738"
 			await client.send_message(message.channel, '{0.author.mention} Your announcement has been sent succesfully!'.format(message))
 			args = message.content.split(" ")		
-			channel=client.get_channel('568029667202695169')
-			
+			channel=client.get_channel('570206483262734336')
 			embed = discord.Embed(title='', color=0x3391D0)
 			embed.add_field(name="__Announcement__", value= "```%s```" % (" ".join(args[1:])), inline=False)
 			embed.add_field(name="By:", value="{0.author.mention}".format(message), inline=False)
@@ -234,17 +231,16 @@ async def on_message(message):
 			await client.add_reaction(a, "👍")
 			await client.add_reaction(a, "👎")
 			
-			
-	if message.content.upper().startswith('-KILL'):
-		a=message.content[6:]
-		if a == "":
-			await client.send_message(message.channel, "<:alphaError:468832634542227477> Error. Mention someone to kill him.")
-		else:
-			list = ["{0.author.mention}".format(message) + " rips out " + a + "'s head and starts devouring on his brain cells." , "{0.author.mention}".format(message) + " decided to go to a dance party where his rival " + a + " was at. Later on, " + a +" said: 'I fucking hate this party' and " + "{0.author.mention}".format(message) + " shot him down in plain sight." , "{0.author.mention}".format(message) + " sent " + a+ "to the Sahara desert where " + a + " slowly starved to death." , "{0.author.mention}".format(message) + " found The Hammer of Thor, which explains why " +a+" became toast." , "{0.author.mention}".format(message) + " found a cancer pill, which explains how "+a+ " got cancer." , "{0.author.mention}".format(message) + " had prayed many nights to Poseidon to kill his/her mortal enemy, but he/she never thought he would send a ravenous sharknado to eat "+a+ " and their family! (and a few neighbors too)" , "{0.author.mention}".format(message) + " drowned "+a+ " in a freezing bathtub." , "{0.author.mention}".format(message) + " ordered his pet to attack " + a, "{0.author.mention}".format(message) +" Found a wand and casted 'EXPLODE' spell on " + a, "{0.author.mention}".format(message) + " pushed "+a+" into an active volcano. " , "{0.author.mention}".format(message) + " blindfolded " +a+" and took him/her to gym to kill him/her with a shotgun! " , "{0.author.mention}".format(message) +" has a particular proclivity for pyrotechnics and puts it to good use by strapping " +a+ " to a large rocket and sending him/her straight to the moon. " , "{0.author.mention}".format(message) +" shot " +a+ " with a *lazer gun*, but killed himself/herself due to the backfire." , "{0.author.mention}".format(message)+" threw "+a+" off a bridge." , "{0.author.mention}".format(message)+" helped "+ a +" fix a broken paintball gun, just to kill " + a + " with it."] 
-			secure_random = random.SystemRandom()
-			m=secure_random.choice(list)		
-			await client.send_message(message.channel, m)
-
+	if message.content.startswith('-suggest'):
+			await client.send_message(message.channel, '{0.author.mention} Your suggestion has been sent succesfully!'.format(message))
+			args = message.content.split(" ")		
+			channel=client.get_channel('568135270210207755')
+			embed = discord.Embed(title='', color=0x3D59AB)
+			embed.add_field(name="__Suggestion__", value= "```%s```" % (" ".join(args[1:])), inline=False)
+			embed.add_field(name="By", value="{author}".format(message), inline=False)
+			a=await client.send_message(channel, embed=embed)
+			await client.add_reaction(a, "👍")
+			await client.add_reaction(a, "👎")
 
 
 
